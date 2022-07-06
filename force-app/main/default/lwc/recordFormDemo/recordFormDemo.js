@@ -10,7 +10,7 @@ export default class RecordFormDemo extends LightningElement {
 
     fields = ['AccountId','Name','Customer_Rating__c'];
 
-    // accountObject = ACCOUNT_OBJECT;
+     accountObject = ACCOUNT_OBJECT;
 
     @wire (getRecord , { recordId: '$recordId' , fields: [NAME_FIELD] })
     record;
