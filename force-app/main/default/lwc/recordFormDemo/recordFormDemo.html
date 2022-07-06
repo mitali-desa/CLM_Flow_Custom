@@ -1,0 +1,54 @@
+<template>
+    <lightning-card  title="Record Form">
+        <p class="slds-p-horizontal_small">
+        <lightning-record-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        fields={fields}
+    >
+    </lightning-record-form>
+    </p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+
+    <lightning-card  title="Record Form 1">
+       
+            <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+        >
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                <lightning-output-field field-name="Email"></lightning-output-field>
+            </div>
+        </div>
+        </lightning-record-view-form>
+
+   
+        <p slot="footer">Card Footer 2</p>
+    </lightning-card>
+
+    <lightning-card  title="Record Form 2">
+       
+            <lightning-record-view-form
+            object-api-name={accountObject}
+            record-id={recordId}
+        >
+        <div class="slds-grid">
+           
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-formatted-text value={nameValue} class="slds-text-heading-large"></lightning-formatted-text>
+            </div>
+        </div>
+        </lightning-record-view-form>
+        <p slot="footer">Card Footer 3</p>
+    </lightning-card>
+</template>
